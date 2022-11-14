@@ -1,0 +1,23 @@
+{% load static %}
+
+{% for animal in animaux %}
+    <div class="animal">
+        <div class="'id_animal"> 
+            {{ animal.id_animal }}
+        </div>
+        <div class="etat">
+            {{ animal.etat }}
+        </div>
+        <div class="type">
+            {{ animal.type }}
+        </div>
+        <div class="race">
+            {{ animal.race }}
+        </div>
+        <div class="photo">
+            {{ animal.photo }}
+        </div>
+        <div class="lieu">
+            {{ animal.lieu }}
+        </div>
+    </div>
