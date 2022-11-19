@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Animalerie de Clea Han</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+
+    <body>
+        <div class="titre">
+            <h1> Bienvenue dans l'animalerie de Cléa Han</h1>
+        </div>
+        <div class="intro"> 
+            <h3> Vous pouvez intéragir, vous amuser, chouchouter, et accompagner les animaux dans leurs merveilleuses aventures !</h3>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                
+                <div class="col-md-6"> 
+                    <h3>Les animaux</h3>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>Les équipements</h3>
+                </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    
+                    {% block post_animal %}
+                    {% endblock post_animal %}
+                </div>
+
+                <div class="col-md-6">
+
+                    {% block post_equip %}
+                    {% endblock post_equip %}
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+</html>

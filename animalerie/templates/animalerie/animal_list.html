@@ -1,0 +1,80 @@
+{% extends 'animalerie/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Animalerie de Clea Han</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/animal_list.css' %}">
+    </head>
+
+    <body>
+        {% block post_animal %}
+
+            {% for animal in animaux %}
+                <div style="float: left; 
+                border: 2px solid black; 
+                border-radius: 10%; 
+                padding: 10px; margin: 10px; 
+                break-inside: auto; 
+                background-color: lightcoral;">
+
+                    <div style="font-weight: bolder; font-size:large; ">
+                        <a href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }} </a>
+                    </div>  
+
+                    <div class="photo">
+                        <img style="max-width: 100px; max-height: 80px;" src={{animal.photo.url}}/>
+                    </div>
+                    <div>
+                        race : {{ animal.race }} | type : {{ animal.type }}
+                    </div>
+
+                    <br>
+
+                    <div style="font-style: italic; font-weight: bold;">
+                        état : {{ animal.etat }}
+                    </div>
+
+                    <div class="lieu">
+                        lieu : {{ animal.lieu }}
+                    </div>
+                    
+                </div>
+                <br>
+            {% endfor %}
+        {% endblock post_animal %}
+    </div>
+
+    <div class="liste_equip">
+        {% block post_equip %}
+            {% for equip in equipements %}
+
+                <div style="float: left; width: 200px; 
+                border: 2px solid black; 
+                border-radius: 10%; 
+                padding: 10px; 
+                margin: 20px; 
+                break-inside: auto; 
+                background-color: lightblue;">
+
+                    <div style="font-weight: bolder; font-size:large; ">
+                        {{ equip.id_equip }}
+                    </div>
+                    <div style="color: blue; font-size: large;">
+                        disponibilité : {{ equip.disponibilite }}
+                    </div>
+                    <br>
+                    <div class="image">
+                        <img style="max-width: 100px; max-height: 80px;" src={{equip.photo.url}}/>
+                    </div>
+                    <br>
+                </div>
+                <br>
+            {% endfor %}
+        {% endblock post_equip %}
+
+    </body>
+</html>
