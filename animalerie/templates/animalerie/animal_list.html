@@ -12,8 +12,8 @@
             <div class="nom_animal">
                 <a href="{% url 'post_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
             </div>
-
-            <img class="image_animal" src='../{{animal.photo}}' alt="Pas d'image"/>
+            {{animal.photo}}'
+            <img class="image_animal" src='{{animal.photo}}' alt="Pas d'image"/>
 
             <div class="description_animal">
                 race : {{ animal.race }} | type : {{ animal.type }}
