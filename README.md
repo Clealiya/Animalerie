@@ -1,4 +1,4 @@
-# Projet d'option d'informatique _Data Driven Prorgamming_ de Centrale Méditerranée
+# 2022 - 2023 | Projet d'option d'informatique _Data Driven Prorgamming_ de Centrale Méditerranée
 
 ## Contexte et objectifs 
 
